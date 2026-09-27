@@ -1,0 +1,7 @@
+int x;
+int y;
+x = 12abc;
+y = x @ 3;
+y = x $ 1;
+/* este comentario e aberto e nunca fechado
+int z;

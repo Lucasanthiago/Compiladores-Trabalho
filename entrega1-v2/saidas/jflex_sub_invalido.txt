@@ -1,0 +1,20 @@
+== scanner gerado com JFlex (subconjunto) -- invalido.txt ==
+LIN   COL   TOKEN    LEXEMA
+-----------------------------------------
+1     1     NUM      12
+ERRO LEXICO linha 1 coluna 3: caractere fora do alfabeto "*"
+1     4     NUM      34
+2     1     NUM      1
+2     3     addop    +
+ERRO LEXICO linha 2 coluna 5: caractere fora do alfabeto "a"
+3     1     NUM      7
+ERRO LEXICO linha 3 coluna 3: caractere fora do alfabeto "@"
+3     5     NUM      8
+ERRO LEXICO linha 4 coluna 1: caractere fora do alfabeto "("
+4     2     NUM      1
+4     3     addop    +
+4     4     NUM      2
+ERRO LEXICO linha 4 coluna 5: caractere fora do alfabeto ")"
+5     1     NUM      9
+-----------------------------------------
+erros lexicos: 5

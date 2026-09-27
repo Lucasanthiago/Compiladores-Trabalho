@@ -1,0 +1,28 @@
+== scanner gerado com JFlex -- invalido.cm ==
+LIN   COL   TOKEN      LEXEMA
+--------------------------------------------
+1     1     INT        int
+1     5     ID         x
+1     6     SEMI       ;
+2     1     INT        int
+2     5     ID         y
+2     6     SEMI       ;
+3     1     ID         x
+3     3     ASSIGN     =
+ERRO LEXICO linha 3 coluna 5: numero mal formado "12abc"
+3     10    SEMI       ;
+4     1     ID         y
+4     3     ASSIGN     =
+4     5     ID         x
+ERRO LEXICO linha 4 coluna 7: caractere invalido "@"
+4     9     NUM        3
+4     10    SEMI       ;
+5     1     ID         y
+5     3     ASSIGN     =
+5     5     ID         x
+ERRO LEXICO linha 5 coluna 7: caractere invalido "$"
+5     9     NUM        1
+5     10    SEMI       ;
+ERRO LEXICO linha 6 coluna 1: comentario aberto e nao fechado
+--------------------------------------------
+erros lexicos: 4

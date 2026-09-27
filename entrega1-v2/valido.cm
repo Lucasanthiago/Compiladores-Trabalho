@@ -1,0 +1,20 @@
+/* programa valido em C-Minus: maximo divisor comum e um laco */
+int gcd(int u, int v)
+{
+    if (v == 0) return u;
+    else return gcd(v, u - u/v*v);
+}
+
+void main(void)
+{
+    int x[10];
+    int i;
+    i = 0;
+    while (i < 10) {
+        x[i] = i * 2;
+        i = i + 1;
+    }
+    if (x[3] >= 6) x[3] = x[3] - 1;
+    if (i != 10) i = 0;
+    if (i <= 9) i = i + 1;
+}
