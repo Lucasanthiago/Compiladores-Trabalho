@@ -1,0 +1,93 @@
+Passo Pilha                       Entrada                     Ação
+1     E $                         num + num * ( num - num ) $ E → T E'
+2     T E' $                      num + num * ( num - num ) $ T → F T'
+3     F T' E' $                   num + num * ( num - num ) $ F → P F'
+4     P F' T' E' $                num + num * ( num - num ) $ P → num
+5     num F' T' E' $              num + num * ( num - num ) $ casa 'num'
+6     F' T' E' $                  + num * ( num - num ) $     F' → ε
+7     T' E' $                     + num * ( num - num ) $     T' → ε
+8     E' $                        + num * ( num - num ) $     E' → + T E'
+9     + T E' $                    + num * ( num - num ) $     casa '+'
+10    T E' $                      num * ( num - num ) $       T → F T'
+11    F T' E' $                   num * ( num - num ) $       F → P F'
+12    P F' T' E' $                num * ( num - num ) $       P → num
+13    num F' T' E' $              num * ( num - num ) $       casa 'num'
+14    F' T' E' $                  * ( num - num ) $           F' → ε
+15    T' E' $                     * ( num - num ) $           T' → * F T'
+16    * F T' E' $                 * ( num - num ) $           casa '*'
+17    F T' E' $                   ( num - num ) $             F → P F'
+18    P F' T' E' $                ( num - num ) $             P → ( E )
+19    ( E ) F' T' E' $            ( num - num ) $             casa '('
+20    E ) F' T' E' $              num - num ) $               E → T E'
+21    T E' ) F' T' E' $           num - num ) $               T → F T'
+22    F T' E' ) F' T' E' $        num - num ) $               F → P F'
+23    P F' T' E' ) F' T' E' $     num - num ) $               P → num
+24    num F' T' E' ) F' T' E' $   num - num ) $               casa 'num'
+25    F' T' E' ) F' T' E' $       - num ) $                   F' → ε
+26    T' E' ) F' T' E' $          - num ) $                   T' → ε
+27    E' ) F' T' E' $             - num ) $                   E' → - T E'
+28    - T E' ) F' T' E' $         - num ) $                   casa '-'
+29    T E' ) F' T' E' $           num ) $                     T → F T'
+30    F T' E' ) F' T' E' $        num ) $                     F → P F'
+31    P F' T' E' ) F' T' E' $     num ) $                     P → num
+32    num F' T' E' ) F' T' E' $   num ) $                     casa 'num'
+33    F' T' E' ) F' T' E' $       ) $                         F' → ε
+34    T' E' ) F' T' E' $          ) $                         T' → ε
+35    E' ) F' T' E' $             ) $                         E' → ε
+36    ) F' T' E' $                ) $                         casa ')'
+37    F' T' E' $                  $                           F' → ε
+38    T' E' $                     $                           T' → ε
+39    E' $                        $                           E' → ε
+40    $                           $                           ACEITA
+
+Árvore sintática:
+E
+├── T
+│   ├── F
+│   │   ├── P
+│   │   │   └── num(2)
+│   │   └── F'
+│   │       └── ε
+│   └── T'
+│       └── ε
+└── E'
+    ├── +
+    ├── T
+    │   ├── F
+    │   │   ├── P
+    │   │   │   └── num(3)
+    │   │   └── F'
+    │   │       └── ε
+    │   └── T'
+    │       ├── *
+    │       ├── F
+    │       │   ├── P
+    │       │   │   ├── (
+    │       │   │   ├── E
+    │       │   │   │   ├── T
+    │       │   │   │   │   ├── F
+    │       │   │   │   │   │   ├── P
+    │       │   │   │   │   │   │   └── num(4)
+    │       │   │   │   │   │   └── F'
+    │       │   │   │   │   │       └── ε
+    │       │   │   │   │   └── T'
+    │       │   │   │   │       └── ε
+    │       │   │   │   └── E'
+    │       │   │   │       ├── -
+    │       │   │   │       ├── T
+    │       │   │   │       │   ├── F
+    │       │   │   │       │   │   ├── P
+    │       │   │   │       │   │   │   └── num(1)
+    │       │   │   │       │   │   └── F'
+    │       │   │   │       │   │       └── ε
+    │       │   │   │       │   └── T'
+    │       │   │   │       │       └── ε
+    │       │   │   │       └── E'
+    │       │   │   │           └── ε
+    │       │   │   └── )
+    │       │   └── F'
+    │       │       └── ε
+    │       └── T'
+    │           └── ε
+    └── E'
+        └── ε

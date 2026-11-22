@@ -1,0 +1,12 @@
+Passo Pilha                       Entrada                     Ação
+1     E $                         num + * num $               E → T E'
+2     T E' $                      num + * num $               T → F T'
+3     F T' E' $                   num + * num $               F → P F'
+4     P F' T' E' $                num + * num $               P → num
+5     num F' T' E' $              num + * num $               casa 'num'
+6     F' T' E' $                  + * num $                   F' → ε
+7     T' E' $                     + * num $                   T' → ε
+8     E' $                        + * num $                   E' → + T E'
+9     + T E' $                    + * num $                   casa '+'
+
+ERRO ErroSintatico: coluna 5: encontrou '*', esperava ['(', 'num']

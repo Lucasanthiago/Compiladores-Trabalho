@@ -109,11 +109,27 @@ def parse(toks):
                 f"coluna {tok.col}: encontrou '{tok.tipo}', esperava '{topo.simbolo}'")
         print(f"{passo:<6}{s_pilha:<28}{s_ent:<28}{acao}")
 
-if __name__ == "__main__":
-    expr = " ".join(sys.argv[1:]) or input("Expressão: ")
+def main():
+    if len(sys.argv) > 1 and sys.argv[1] == "--file":
+        if len(sys.argv) != 3:
+            print("Uso: AnlMathExp.py [--file arquivo.expr | expressao]")
+            sys.exit(2)
+        try:
+            with open(sys.argv[2], encoding="utf-8") as arquivo:
+                expr = arquivo.read().strip()
+        except OSError as erro:
+            print(f"Erro ao ler arquivo: {erro}", file=sys.stderr)
+            sys.exit(2)
+    else:
+        expr = " ".join(sys.argv[1:]) or input("Expressão: ")
     try:
         arvore = parse(lexer(expr))
         print("\nÁrvore sintática:")
         imprime(arvore)
     except (ErroLexico, ErroSintatico) as e:
         print(f"\nERRO {type(e).__name__}: {e}")
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()

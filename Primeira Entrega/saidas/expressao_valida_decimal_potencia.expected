@@ -1,0 +1,74 @@
+Passo Pilha                       Entrada                     Ação
+1     E $                         num ^ num ^ num + num / num $E → T E'
+2     T E' $                      num ^ num ^ num + num / num $T → F T'
+3     F T' E' $                   num ^ num ^ num + num / num $F → P F'
+4     P F' T' E' $                num ^ num ^ num + num / num $P → num
+5     num F' T' E' $              num ^ num ^ num + num / num $casa 'num'
+6     F' T' E' $                  ^ num ^ num + num / num $   F' → ^ F
+7     ^ F T' E' $                 ^ num ^ num + num / num $   casa '^'
+8     F T' E' $                   num ^ num + num / num $     F → P F'
+9     P F' T' E' $                num ^ num + num / num $     P → num
+10    num F' T' E' $              num ^ num + num / num $     casa 'num'
+11    F' T' E' $                  ^ num + num / num $         F' → ^ F
+12    ^ F T' E' $                 ^ num + num / num $         casa '^'
+13    F T' E' $                   num + num / num $           F → P F'
+14    P F' T' E' $                num + num / num $           P → num
+15    num F' T' E' $              num + num / num $           casa 'num'
+16    F' T' E' $                  + num / num $               F' → ε
+17    T' E' $                     + num / num $               T' → ε
+18    E' $                        + num / num $               E' → + T E'
+19    + T E' $                    + num / num $               casa '+'
+20    T E' $                      num / num $                 T → F T'
+21    F T' E' $                   num / num $                 F → P F'
+22    P F' T' E' $                num / num $                 P → num
+23    num F' T' E' $              num / num $                 casa 'num'
+24    F' T' E' $                  / num $                     F' → ε
+25    T' E' $                     / num $                     T' → / F T'
+26    / F T' E' $                 / num $                     casa '/'
+27    F T' E' $                   num $                       F → P F'
+28    P F' T' E' $                num $                       P → num
+29    num F' T' E' $              num $                       casa 'num'
+30    F' T' E' $                  $                           F' → ε
+31    T' E' $                     $                           T' → ε
+32    E' $                        $                           E' → ε
+33    $                           $                           ACEITA
+
+Árvore sintática:
+E
+├── T
+│   ├── F
+│   │   ├── P
+│   │   │   └── num(2)
+│   │   └── F'
+│   │       ├── ^
+│   │       └── F
+│   │           ├── P
+│   │           │   └── num(3)
+│   │           └── F'
+│   │               ├── ^
+│   │               └── F
+│   │                   ├── P
+│   │                   │   └── num(2)
+│   │                   └── F'
+│   │                       └── ε
+│   └── T'
+│       └── ε
+└── E'
+    ├── +
+    ├── T
+    │   ├── F
+    │   │   ├── P
+    │   │   │   └── num(1.5)
+    │   │   └── F'
+    │   │       └── ε
+    │   └── T'
+    │       ├── /
+    │       ├── F
+    │       │   ├── P
+    │       │   │   └── num(0.5)
+    │       │   └── F'
+    │       │       └── ε
+    │       └── T'
+    │           └── ε
+    └── E'
+        └── ε
