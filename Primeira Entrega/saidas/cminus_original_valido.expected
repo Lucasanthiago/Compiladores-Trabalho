@@ -1,0 +1,368 @@
+Codigo sintaticamente valido.
+Arvore sintatica:
+program
+  declaration_list
+    declaration_list
+      declaration
+        fun_declaration
+          type_specifier
+            INT: int (linha 2, coluna 1)
+          ID: gcd (linha 2, coluna 5)
+          LPAREN: ( (linha 2, coluna 8)
+          params
+            param_list
+              param_list
+                param
+                  type_specifier
+                    INT: int (linha 2, coluna 9)
+                  ID: u (linha 2, coluna 13)
+              COMMA: , (linha 2, coluna 14)
+              param
+                type_specifier
+                  INT: int (linha 2, coluna 16)
+                ID: v (linha 2, coluna 20)
+          RPAREN: ) (linha 2, coluna 21)
+          compound_stmt
+            LBRACE: { (linha 3, coluna 1)
+            local_declarations
+              epsilon
+            statement_list
+              statement_list
+                epsilon
+              statement
+                selection_stmt
+                  IF: if (linha 4, coluna 5)
+                  LPAREN: ( (linha 4, coluna 8)
+                  expression
+                    simple_expression
+                      additive_expression
+                        term
+                          factor
+                            var
+                              ID: v (linha 4, coluna 9)
+                      relop
+                        EQ: == (linha 4, coluna 11)
+                      additive_expression
+                        term
+                          factor
+                            NUM: 0 (linha 4, coluna 14)
+                  RPAREN: ) (linha 4, coluna 15)
+                  statement
+                    return_stmt
+                      RETURN: return (linha 4, coluna 17)
+                      expression
+                        simple_expression
+                          additive_expression
+                            term
+                              factor
+                                var
+                                  ID: u (linha 4, coluna 24)
+                      SEMI: ; (linha 4, coluna 25)
+                  ELSE: else (linha 5, coluna 5)
+                  statement
+                    return_stmt
+                      RETURN: return (linha 5, coluna 10)
+                      expression
+                        simple_expression
+                          additive_expression
+                            term
+                              factor
+                                call
+                                  ID: gcd (linha 5, coluna 17)
+                                  LPAREN: ( (linha 5, coluna 20)
+                                  args
+                                    arg_list
+                                      arg_list
+                                        expression
+                                          simple_expression
+                                            additive_expression
+                                              term
+                                                factor
+                                                  var
+                                                    ID: v (linha 5, coluna 21)
+                                      COMMA: , (linha 5, coluna 22)
+                                      expression
+                                        simple_expression
+                                          additive_expression
+                                            additive_expression
+                                              term
+                                                factor
+                                                  var
+                                                    ID: u (linha 5, coluna 24)
+                                            addop
+                                              MINUS: - (linha 5, coluna 26)
+                                            term
+                                              term
+                                                term
+                                                  factor
+                                                    var
+                                                      ID: u (linha 5, coluna 28)
+                                                mulop
+                                                  OVER: / (linha 5, coluna 29)
+                                                factor
+                                                  var
+                                                    ID: v (linha 5, coluna 30)
+                                              mulop
+                                                TIMES: * (linha 5, coluna 31)
+                                              factor
+                                                var
+                                                  ID: v (linha 5, coluna 32)
+                                  RPAREN: ) (linha 5, coluna 33)
+                      SEMI: ; (linha 5, coluna 34)
+            RBRACE: } (linha 6, coluna 1)
+    declaration
+      fun_declaration
+        type_specifier
+          VOID: void (linha 8, coluna 1)
+        ID: main (linha 8, coluna 6)
+        LPAREN: ( (linha 8, coluna 10)
+        params
+          VOID: void (linha 8, coluna 11)
+        RPAREN: ) (linha 8, coluna 15)
+        compound_stmt
+          LBRACE: { (linha 9, coluna 1)
+          local_declarations
+            local_declarations
+              local_declarations
+                epsilon
+              var_declaration
+                type_specifier
+                  INT: int (linha 10, coluna 5)
+                ID: x (linha 10, coluna 9)
+                LBRACKET: [ (linha 10, coluna 10)
+                NUM: 10 (linha 10, coluna 11)
+                RBRACKET: ] (linha 10, coluna 13)
+                SEMI: ; (linha 10, coluna 14)
+            var_declaration
+              type_specifier
+                INT: int (linha 11, coluna 5)
+              ID: i (linha 11, coluna 9)
+              SEMI: ; (linha 11, coluna 10)
+          statement_list
+            statement_list
+              statement_list
+                statement_list
+                  statement_list
+                    statement_list
+                      epsilon
+                    statement
+                      expression_stmt
+                        expression
+                          var
+                            ID: i (linha 12, coluna 5)
+                          ASSIGN: = (linha 12, coluna 7)
+                          expression
+                            simple_expression
+                              additive_expression
+                                term
+                                  factor
+                                    NUM: 0 (linha 12, coluna 9)
+                        SEMI: ; (linha 12, coluna 10)
+                  statement
+                    iteration_stmt
+                      WHILE: while (linha 13, coluna 5)
+                      LPAREN: ( (linha 13, coluna 11)
+                      expression
+                        simple_expression
+                          additive_expression
+                            term
+                              factor
+                                var
+                                  ID: i (linha 13, coluna 12)
+                          relop
+                            LT: < (linha 13, coluna 14)
+                          additive_expression
+                            term
+                              factor
+                                NUM: 10 (linha 13, coluna 16)
+                      RPAREN: ) (linha 13, coluna 18)
+                      statement
+                        compound_stmt
+                          LBRACE: { (linha 13, coluna 20)
+                          local_declarations
+                            epsilon
+                          statement_list
+                            statement_list
+                              statement_list
+                                epsilon
+                              statement
+                                expression_stmt
+                                  expression
+                                    var
+                                      ID: x (linha 14, coluna 9)
+                                      LBRACKET: [ (linha 14, coluna 10)
+                                      expression
+                                        simple_expression
+                                          additive_expression
+                                            term
+                                              factor
+                                                var
+                                                  ID: i (linha 14, coluna 11)
+                                      RBRACKET: ] (linha 14, coluna 12)
+                                    ASSIGN: = (linha 14, coluna 14)
+                                    expression
+                                      simple_expression
+                                        additive_expression
+                                          term
+                                            term
+                                              factor
+                                                var
+                                                  ID: i (linha 14, coluna 16)
+                                            mulop
+                                              TIMES: * (linha 14, coluna 18)
+                                            factor
+                                              NUM: 2 (linha 14, coluna 20)
+                                  SEMI: ; (linha 14, coluna 21)
+                            statement
+                              expression_stmt
+                                expression
+                                  var
+                                    ID: i (linha 15, coluna 9)
+                                  ASSIGN: = (linha 15, coluna 11)
+                                  expression
+                                    simple_expression
+                                      additive_expression
+                                        additive_expression
+                                          term
+                                            factor
+                                              var
+                                                ID: i (linha 15, coluna 13)
+                                        addop
+                                          PLUS: + (linha 15, coluna 15)
+                                        term
+                                          factor
+                                            NUM: 1 (linha 15, coluna 17)
+                                SEMI: ; (linha 15, coluna 18)
+                          RBRACE: } (linha 16, coluna 5)
+                statement
+                  selection_stmt
+                    IF: if (linha 17, coluna 5)
+                    LPAREN: ( (linha 17, coluna 8)
+                    expression
+                      simple_expression
+                        additive_expression
+                          term
+                            factor
+                              var
+                                ID: x (linha 17, coluna 9)
+                                LBRACKET: [ (linha 17, coluna 10)
+                                expression
+                                  simple_expression
+                                    additive_expression
+                                      term
+                                        factor
+                                          NUM: 3 (linha 17, coluna 11)
+                                RBRACKET: ] (linha 17, coluna 12)
+                        relop
+                          GE: >= (linha 17, coluna 14)
+                        additive_expression
+                          term
+                            factor
+                              NUM: 6 (linha 17, coluna 17)
+                    RPAREN: ) (linha 17, coluna 18)
+                    statement
+                      expression_stmt
+                        expression
+                          var
+                            ID: x (linha 17, coluna 20)
+                            LBRACKET: [ (linha 17, coluna 21)
+                            expression
+                              simple_expression
+                                additive_expression
+                                  term
+                                    factor
+                                      NUM: 3 (linha 17, coluna 22)
+                            RBRACKET: ] (linha 17, coluna 23)
+                          ASSIGN: = (linha 17, coluna 25)
+                          expression
+                            simple_expression
+                              additive_expression
+                                additive_expression
+                                  term
+                                    factor
+                                      var
+                                        ID: x (linha 17, coluna 27)
+                                        LBRACKET: [ (linha 17, coluna 28)
+                                        expression
+                                          simple_expression
+                                            additive_expression
+                                              term
+                                                factor
+                                                  NUM: 3 (linha 17, coluna 29)
+                                        RBRACKET: ] (linha 17, coluna 30)
+                                addop
+                                  MINUS: - (linha 17, coluna 32)
+                                term
+                                  factor
+                                    NUM: 1 (linha 17, coluna 34)
+                        SEMI: ; (linha 17, coluna 35)
+              statement
+                selection_stmt
+                  IF: if (linha 18, coluna 5)
+                  LPAREN: ( (linha 18, coluna 8)
+                  expression
+                    simple_expression
+                      additive_expression
+                        term
+                          factor
+                            var
+                              ID: i (linha 18, coluna 9)
+                      relop
+                        NE: != (linha 18, coluna 11)
+                      additive_expression
+                        term
+                          factor
+                            NUM: 10 (linha 18, coluna 14)
+                  RPAREN: ) (linha 18, coluna 16)
+                  statement
+                    expression_stmt
+                      expression
+                        var
+                          ID: i (linha 18, coluna 18)
+                        ASSIGN: = (linha 18, coluna 20)
+                        expression
+                          simple_expression
+                            additive_expression
+                              term
+                                factor
+                                  NUM: 0 (linha 18, coluna 22)
+                      SEMI: ; (linha 18, coluna 23)
+            statement
+              selection_stmt
+                IF: if (linha 19, coluna 5)
+                LPAREN: ( (linha 19, coluna 8)
+                expression
+                  simple_expression
+                    additive_expression
+                      term
+                        factor
+                          var
+                            ID: i (linha 19, coluna 9)
+                    relop
+                      LE: <= (linha 19, coluna 11)
+                    additive_expression
+                      term
+                        factor
+                          NUM: 9 (linha 19, coluna 14)
+                RPAREN: ) (linha 19, coluna 15)
+                statement
+                  expression_stmt
+                    expression
+                      var
+                        ID: i (linha 19, coluna 17)
+                      ASSIGN: = (linha 19, coluna 19)
+                      expression
+                        simple_expression
+                          additive_expression
+                            additive_expression
+                              term
+                                factor
+                                  var
+                                    ID: i (linha 19, coluna 21)
+                            addop
+                              PLUS: + (linha 19, coluna 23)
+                            term
+                              factor
+                                NUM: 1 (linha 19, coluna 25)
+                    SEMI: ; (linha 19, coluna 26)
+          RBRACE: } (linha 20, coluna 1)

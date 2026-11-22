@@ -1,0 +1,16 @@
+int valores[5];
+
+void preencher(void) {
+    int i;
+    i = 0;
+    while (i < 5) {
+        valores[i] = i * 2;
+        i = i + 1;
+    }
+    return;
+}
+
+int main(void) {
+    preencher();
+    return valores[0];
+}

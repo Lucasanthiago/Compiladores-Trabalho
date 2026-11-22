@@ -1,0 +1,16 @@
+int total;
+
+int soma(int a, int b) {
+    int resultado;
+    resultado = a + b * 2;
+    return resultado;
+}
+
+int main(void) {
+    int valor;
+    valor = soma(3, 4);
+    if (valor >= 10)
+        return valor;
+    else
+        return 0;
+}

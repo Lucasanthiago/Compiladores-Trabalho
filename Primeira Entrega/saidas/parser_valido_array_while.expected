@@ -1,0 +1,184 @@
+Codigo sintaticamente valido.
+Arvore sintatica:
+program
+  declaration_list
+    declaration_list
+      declaration_list
+        declaration
+          var_declaration
+            type_specifier
+              INT: int (linha 1, coluna 1)
+            ID: valores (linha 1, coluna 5)
+            LBRACKET: [ (linha 1, coluna 12)
+            NUM: 5 (linha 1, coluna 13)
+            RBRACKET: ] (linha 1, coluna 14)
+            SEMI: ; (linha 1, coluna 15)
+      declaration
+        fun_declaration
+          type_specifier
+            VOID: void (linha 3, coluna 1)
+          ID: preencher (linha 3, coluna 6)
+          LPAREN: ( (linha 3, coluna 15)
+          params
+            VOID: void (linha 3, coluna 16)
+          RPAREN: ) (linha 3, coluna 20)
+          compound_stmt
+            LBRACE: { (linha 3, coluna 22)
+            local_declarations
+              local_declarations
+                epsilon
+              var_declaration
+                type_specifier
+                  INT: int (linha 4, coluna 5)
+                ID: i (linha 4, coluna 9)
+                SEMI: ; (linha 4, coluna 10)
+            statement_list
+              statement_list
+                statement_list
+                  statement_list
+                    epsilon
+                  statement
+                    expression_stmt
+                      expression
+                        var
+                          ID: i (linha 5, coluna 5)
+                        ASSIGN: = (linha 5, coluna 7)
+                        expression
+                          simple_expression
+                            additive_expression
+                              term
+                                factor
+                                  NUM: 0 (linha 5, coluna 9)
+                      SEMI: ; (linha 5, coluna 10)
+                statement
+                  iteration_stmt
+                    WHILE: while (linha 6, coluna 5)
+                    LPAREN: ( (linha 6, coluna 11)
+                    expression
+                      simple_expression
+                        additive_expression
+                          term
+                            factor
+                              var
+                                ID: i (linha 6, coluna 12)
+                        relop
+                          LT: < (linha 6, coluna 14)
+                        additive_expression
+                          term
+                            factor
+                              NUM: 5 (linha 6, coluna 16)
+                    RPAREN: ) (linha 6, coluna 17)
+                    statement
+                      compound_stmt
+                        LBRACE: { (linha 6, coluna 19)
+                        local_declarations
+                          epsilon
+                        statement_list
+                          statement_list
+                            statement_list
+                              epsilon
+                            statement
+                              expression_stmt
+                                expression
+                                  var
+                                    ID: valores (linha 7, coluna 9)
+                                    LBRACKET: [ (linha 7, coluna 16)
+                                    expression
+                                      simple_expression
+                                        additive_expression
+                                          term
+                                            factor
+                                              var
+                                                ID: i (linha 7, coluna 17)
+                                    RBRACKET: ] (linha 7, coluna 18)
+                                  ASSIGN: = (linha 7, coluna 20)
+                                  expression
+                                    simple_expression
+                                      additive_expression
+                                        term
+                                          term
+                                            factor
+                                              var
+                                                ID: i (linha 7, coluna 22)
+                                          mulop
+                                            TIMES: * (linha 7, coluna 24)
+                                          factor
+                                            NUM: 2 (linha 7, coluna 26)
+                                SEMI: ; (linha 7, coluna 27)
+                          statement
+                            expression_stmt
+                              expression
+                                var
+                                  ID: i (linha 8, coluna 9)
+                                ASSIGN: = (linha 8, coluna 11)
+                                expression
+                                  simple_expression
+                                    additive_expression
+                                      additive_expression
+                                        term
+                                          factor
+                                            var
+                                              ID: i (linha 8, coluna 13)
+                                      addop
+                                        PLUS: + (linha 8, coluna 15)
+                                      term
+                                        factor
+                                          NUM: 1 (linha 8, coluna 17)
+                              SEMI: ; (linha 8, coluna 18)
+                        RBRACE: } (linha 9, coluna 5)
+              statement
+                return_stmt
+                  RETURN: return (linha 10, coluna 5)
+                  SEMI: ; (linha 10, coluna 11)
+            RBRACE: } (linha 11, coluna 1)
+    declaration
+      fun_declaration
+        type_specifier
+          INT: int (linha 13, coluna 1)
+        ID: main (linha 13, coluna 5)
+        LPAREN: ( (linha 13, coluna 9)
+        params
+          VOID: void (linha 13, coluna 10)
+        RPAREN: ) (linha 13, coluna 14)
+        compound_stmt
+          LBRACE: { (linha 13, coluna 16)
+          local_declarations
+            epsilon
+          statement_list
+            statement_list
+              statement_list
+                epsilon
+              statement
+                expression_stmt
+                  expression
+                    simple_expression
+                      additive_expression
+                        term
+                          factor
+                            call
+                              ID: preencher (linha 14, coluna 5)
+                              LPAREN: ( (linha 14, coluna 14)
+                              args
+                                epsilon
+                              RPAREN: ) (linha 14, coluna 15)
+                  SEMI: ; (linha 14, coluna 16)
+            statement
+              return_stmt
+                RETURN: return (linha 15, coluna 5)
+                expression
+                  simple_expression
+                    additive_expression
+                      term
+                        factor
+                          var
+                            ID: valores (linha 15, coluna 12)
+                            LBRACKET: [ (linha 15, coluna 19)
+                            expression
+                              simple_expression
+                                additive_expression
+                                  term
+                                    factor
+                                      NUM: 0 (linha 15, coluna 20)
+                            RBRACKET: ] (linha 15, coluna 21)
+                SEMI: ; (linha 15, coluna 22)
+          RBRACE: } (linha 16, coluna 1)
